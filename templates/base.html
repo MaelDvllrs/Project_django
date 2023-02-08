@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    {% block extra_head %}{% endblock %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="icon" href="{% static 'assets/icone.png' %}">
+</head>
+<body>
+    <div class="page">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img id="logo_princ" src="{% static 'assets/icone.png' %}">
+                </div>
+            </div>
+            <div class="separ"></div>
+            <div class="menu">
+                <a class="categorie" href="/">
+                    <span class="material-icons-outlined">home</span>
+                    <p class="name_menu">Home</p>
+                </a>
+                <div class="separ"></div>
+                <a class="categorie" href="">
+                    <span class="material-icons-outlined">music_note</span>
+                    <p class="name_menu">Style</p>
+                </a>
+                <a class="categorie" href="/search/?q=">
+                    <span class="material-icons-outlined">search</span>
+                    <p class="name_menu">Search</p>
+                </a>
+                <a class="categorie" href="/album">
+                    <span class="material-icons-outlined">library_music</span>
+                    <p class="name_menu">Album</p>
+                </a>
+                <a class="categorie" href="/playlist/?q=">
+                    <span class="material-icons-outlined">library_music</span>
+                    <p class="name_menu">Playlist</p>
+                </a>
+                <a class="categorie" href="/addMusic">
+                    <span class="material-icons-outlined">add_circle</span>
+                    <p class="name_menu">Add song</p>
+                </a>
+                <div class="separ"></div>
+                <a class="categorie" href="">
+                    <span class="material-icons-outlined">settings</span>
+                    <p class="name_menu">Setting</p>
+                </a>
+                <a class="categorie" href="Profil.html">
+                    <span class="material-icons-outlined">person</span>
+                    <p class="name_menu">Profil</p>
+                </a>
+                <div class="separ"></div>
+                {% if user.is_authenticated %}
+                    <a class="categorie" href="{% url 'account_logout' %}">
+                        <span class="material-icons-outlined">logout</span>
+                        <p class="name_menu">Logout</p>
+                    </a>
+                {% endif %}
+            </div>
+        </aside>
+        <div class=center>
+            {% block content %}
+
+            {% endblock %}
+        </div>
+    </div>
+    <script src="{% static 'js/base.js' %}"></script>
+</body>
+</html>

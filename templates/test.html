@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   CodePen - Flat music player
+  </title>
+  <link href="{% static 'js/test.js' %}" rel="stylesheet"/>
+ </head>
+ <body>
+      <div class="music-player">
+        {% for item in page_obj %}
+       <div class="cover">
+        <img alt="" src="{{item.image.url}}"/>
+       </div>
+       <div class="titre">
+        <h3>
+         {{item.artist}}
+        </h3>
+        <h1>
+         {{item.title}}
+        </h1>
+       </div>
+       <div class="lecteur">
+
+         <audio controls src="{% if item.audio_file %}{{item.audio_file.url}} {% else %} {{item.audio_link}} {% endif %}" type="audio/mp3">
+         </audio>
+
+       </div>
+       {% endfor %}
+      </div>
+ </body>
+</html>

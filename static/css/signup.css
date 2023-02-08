@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+:root{
+    /*COLOR*/
+    --color-background: #181a1e;
+    --color-menu: #202528;
+    --color-text-violet: #7030a0;
+
+    /*FONT*/
+    --font-nunito: 'Nunito', sans-serif;
+
+}
+
+
+body{
+    background-color: var(--color-background);
+    overflow-x: hidden;
+    font-family: var(--font-nunito);
+}
+
+.container{
+    height: 100vh;
+    width: 80vw;
+}
+
+
+.register-form{
+    position: absolute;
+    width: 30%;
+    height: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--color-menu);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid var(--color-menu)15px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 40px black;
+    color: white;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin-bottom: 5%;
+}
+
+h1{
+    position: relative;
+    text-align: center;
+    bottom: 20%;
+    font-family: var(--font-nunito);
+}
+
+h2{
+    margin-bottom: 5%;
+    color: var(--color-text-violet);
+    text-align: center;
+}
+
+img{
+    width: 60px;
+}
+
+.or{
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.line{
+    height: 2px;
+    background-color: white;
+    width: 40%;
+}
+
+form{
+    width: 95%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#id_username, #id_email, #id_password1, #id_password2{
+    width: 90%;
+    height: 30%;
+    padding-left: 5%;
+    background-color: transparent;
+    border: var(--color-text-violet) solid 1px;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    color: white;
+    font-family: var(--font-nunito);
+}
+
+#id_username{
+    border-top-width: 2px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+#id_password2{
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-bottom-width: 2px;
+}
+
+#id_username:focus, #id_email:focus, #id_password1:focus, #id_password2:focus {
+    outline: none;
+}
+button{
+    margin-top: 5%;
+    width: 90%;
+    height: 30%;
+    background-color: var(--color-text-violet);
+    border: var(--color-text-violet) solid 2px;
+    border-radius: 7px;
+    color: var(--color-menu);
+    font-size: 20px;
+}
+
+button:hover{
+    background-color: var(--color-menu);
+    color: var(--color-text-violet);
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+.social-media{
+    background-color: white;
+    width: 80%;
+    margin: 2%;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+
+}
+#facebook{
+    background-color: blue;
+
+}
+#google{
+    background-color: red;
+}
+svg{
+    fill: white;
+    margin-right: 4px;
+}
+
+p{
+    margin-top: 5%;
+    text-align: center;
+    font-size: 15px;
+}
+
+

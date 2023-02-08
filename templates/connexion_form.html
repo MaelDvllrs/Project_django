@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/connexion.css' %}">
+    <title>Spotifi</title>
+</head>
+<body>
+    <div class="container">
+        <div class="auth">
+            <div class="socialaccount_providers">
+                {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+            </div>
+                <div class="logo">
+                    <img id="logo_princ" src="{% static 'assets/icone.png' %}">
+                    <h1 id="title-1">Spotifi</h1>
+                </div>
+                <p>{{ message }}</p>
+                <form method="post">
+                        {{ form.as_p }}
+                        {% csrf_token %}
+                        <button type="submit" id="submit-key">Log in</button>
+                </form>
+                <div class="signup">Don't have an account ?<a href="/accounts/signup/">Signup</a></div>
+        </div>
+    </div>
+</body>
+</html>

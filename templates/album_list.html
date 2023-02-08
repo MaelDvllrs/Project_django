@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_head %}
+    <link rel="stylesheet" href="{% static "css/playlist_list.css" %}"/>
+    <title>Spotifi | Album</title>
+{% endblock %}
+{% block content %}
+    <p>All Albums</p>
+    <div class="playlist_list">
+    <div class="container_playlist">
+        {% for object in object_list %}
+            <a class="playlist" href="{% url 'album' object.id%}">
+                <img id="img_playlist" src="{{ object.cover.url }}">
+                <p id="playlist_name"><b>{{ object.title }}</b></p>
+                <p id="playlist_submitter">By: {{ object.submitter }}</p>
+            </a>
+        {% endfor %}
+        <div class="playlist">
+            <span id="add_playlist_icon" class="material-icons-outlined">add_circle</span>
+            <p id="playlist_name"><b>Album</b></p>
+        </div>
+    </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+    <title>Spotifi</title>
+</head>
+<body>
+    <div class="container">
+        <div class="register-form">
+            <div class="logo">
+                <img id="logo_princ" src="{% static 'assets/icone.png' %}">
+                <h1 id="title-1">Spotifi</h1>
+            </div>
+            <form method="post">
+                <p>You are about to sign in using a third party account from {{ provider.name }}</p>
+                {% csrf_token %}
+                <button type="submit">Continue</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

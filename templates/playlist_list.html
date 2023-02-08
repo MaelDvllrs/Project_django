@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_head %}
+    <link rel="stylesheet" href="{% static "css/playlist_list.css" %}"/>
+    <title>Spotifi | playlist</title>
+{% endblock %}
+{% block content %}
+    <div class="playlist_list">
+    <form id="search_form" action="{% url 'playlist_list' %}" method="get" accept-charset="utf-8">
+          <input class="search_bar" name="q" type="text" placeholder="Search playlist name">
+          <button class="search_btn" type="submit">
+               <svg fill="#FFFFFF" width="25px" height="25px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+                   <path d="M1458.948 1305.626c104.637-136.95 167.527-307.187 167.527-492.388C1626.475 364.764 1261.711 0 813.238 0 364.764 0 0 364.764 0 813.238c0 448.473 364.764 813.237 813.238 813.237 185.201 0 355.547-62.89 492.496-167.527L1766.678 1920 1920 1766.678l-461.052-461.052Zm-645.71 103.986c-328.874 0-596.375-267.61-596.375-596.374 0-328.765 267.501-596.375 596.375-596.375 328.873 0 596.374 267.61 596.374 596.375s-267.501 596.374-596.374 596.374Z" fill-rule="evenodd"/>
+               </svg>
+          </button>
+    </form>
+    <p id="title_playlist">My Playlist</p>
+    <hr id="hr_top">
+    <div class="container_playlist">
+        {% for object in object_list %}
+            {% if object.submitter.id == user.id %}
+                <a class="playlist" href="{% url 'playlist' object.id%}">
+                    <img id="img_playlist" src="{{ object.image_playlist.url }}">
+                    <p id="playlist_name"><b>{{ object.name }}</b></p>
+                    <p id="playlist_submitter">Created by {{ object.submitter }}</p>
+                </a>
+            {% endif %}
+        {% endfor %}
+        <a class="playlist" href="{% url 'createPlaylist' %}">
+            <span id="add_playlist_icon" class="material-icons-outlined">add_circle</span>
+            <p id="playlist_name"><b>Create playlist</b></p>
+        </a>
+    </div>
+    </div>
+    <div class="playlist_list">
+    <p id="title_playlist">All Playlist</p>
+    <hr id="hr_top">
+    <div class="container_playlist">
+        {% for object in object_list %}
+            {% if object.submitter.id != user.id and object.public %}
+                <a class="playlist" href="{% url 'playlist' object.id%}">
+                    <img id="img_playlist" src="{{ object.image_playlist.url }}">
+                    <p id="playlist_name"><b>{{ object.name }}</b></p>
+                    <p id="playlist_submitter">Created by {{ object.submitter }}</p>
+                </a>
+            {% endif %}
+        {% endfor %}
+    </div>
+    </div>
+
+
+{% endblock %}

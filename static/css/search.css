@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+:root{
+    /*COLOR*/
+    --color-background: #181a1e;
+    --color-menu: #202528;
+    --color-text-violet: #7030a0;
+
+    /*FONT*/
+    --font-nunito: 'Nunito', sans-serif;
+
+}
+
+.search_container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#search_form{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.search_bar{
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 15px;
+    border: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.search_bar:focus{
+    outline: none;
+}
+
+.search_btn{
+    width: 80px;
+    height: 40px;
+    font-size: 15px;
+    border: dimgrey 5px solid;
+    background-color: dimgrey;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search_btn:hover{
+    background-color: var(--color-menu);
+    border-color: var(--color-menu);
+    cursor: pointer;
+}
+
+
+
+.info-music_list{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    height: 10px;
+    color: dimgrey;
+}
+
+
+#decal_2{
+    width: 40px;
+}
+
+#titre_music_list{
+    width: 20%;
+    text-align: center;
+}
+
+#hr_top{
+    margin-top: 1rem;
+    margin-bottom: 3%;
+    width: 90%;
+    border-color: dimgrey;
+}
+
+.music_list{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+
+}
+
+
+#music_case{
+    position: relative;
+    width: 70%;
+    margin-bottom: 2px;
+}
+
+#music_link{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+#music_link:hover{
+    background-color: var(--color-menu);
+    border-radius: 3px;
+}
+
+.cover_music_playlist{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 3px;
+
+}
+
+.title_music_playlist{
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 20%;
+    text-align: center;
+}
+
+.album_music_playlist{
+    color: white;
+    width: 20%;
+    text-align: center;
+}
+
+.album_music_playlist:hover{
+    color: var(--color-text-violet);
+}

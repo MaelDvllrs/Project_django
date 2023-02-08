@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+:root{
+    /*COLOR*/
+    --color-background: #181a1e;
+    --color-menu: #202528;
+    --color-text-violet: #7030a0;
+
+    /*FONT*/
+    --font-nunito: 'Nunito', sans-serif;
+
+}
+
+
+#search_form{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.search_bar{
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 15px;
+    border: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.search_bar:focus{
+    outline: none;
+}
+
+.search_btn{
+    width: 80px;
+    height: 40px;
+    font-size: 15px;
+    border: dimgrey 5px solid;
+    background-color: dimgrey;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search_btn:hover{
+    background-color: var(--color-menu);
+    border-color: var(--color-menu);
+    cursor: pointer;
+}
+
+.playlist_list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#title_playlist{
+    margin-top: 5%;
+    color: dimgrey;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    padding-left: 5%;
+
+}
+
+#hr_top{
+    margin-top: 1rem;
+    margin-bottom: 3%;
+    width: 90%;
+    border-color: dimgrey;
+}
+
+.container_playlist{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(auto-fill, 1fr);
+    grid-column-gap: 5%;
+    grid-row-gap: 30px;
+    width: 80%;
+    padding: 30px;
+}
+
+.playlist{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-menu);
+    border: 15px solid var(--color-menu);
+    border-radius: 10px;
+    box-shadow: 3px 3px 40px black;
+}
+
+.playlist:hover{
+    background-color: dimgrey;
+    border-color: dimgrey;
+}
+
+
+#img_playlist{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+#playlist_name{
+    color: white;
+}
+
+#playlist_submitter{
+    color: dimgrey;
+}
+
+#add_playlist_icon{
+    font-size: 100px;
+    color: white;
+}

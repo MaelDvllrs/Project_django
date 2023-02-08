@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+:root{
+    /*COLOR*/
+    --color-background: #181a1e;
+    --color-menu: #202528;
+    --color-text-violet: #7030a0;
+
+    /*FONT*/
+    --font-nunito: 'Nunito', sans-serif;
+
+}
+
+
+.div_add_music{
+    margin-top: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+#id_name, #id_image_playlist, #id_music, #id_public{
+    width: 100%;
+    background-color: transparent;
+    margin-bottom: 10%;
+    color: white;
+    font-size: 20px;
+}
+#id_name{
+    height: 30px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: solid 2px var(--color-text-violet);
+}
+
+.btn_add{
+    height: 50px;
+    background-color: transparent;
+    color: var(--color-text-violet);
+    font-size: 20px;
+    border: 4px var(--color-text-violet) solid;
+    border-radius: 50px;
+}
+
+.btn_add:hover{
+    background-color: var(--color-text-violet);
+    color: var(--color-background);
+    cursor: pointer;
+}
+
+

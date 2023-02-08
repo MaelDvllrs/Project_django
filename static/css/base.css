@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root{
+    /*COLOR*/
+    --color-background: #181a1e;
+    --color-menu: #202528;
+    --color-text-violet: #7030a0;
+    --color-hover: #696969;
+
+
+    /*SIZE*/
+    --paddind-menu: 10px;
+    --size-menu: 130px;
+
+
+
+    /*FONT*/
+    --font-poppins: 'Poppins', sans-serif;
+    --font-nunito : 'Nunito', sans-serif;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+/*SCROLLBAR*/
+::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+  }
+
+
+body{
+    background-color: var(--color-background);
+    overflow-x: hidden;
+    font-family: var(--font-nunito);
+    height: 100%;
+
+}
+
+.page{
+    display: flex;
+}
+
+aside{
+    z-index: 10;
+    position: fixed;
+    background-color: var(--color-menu);
+    width: var(--size-menu);
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow: hidden;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.top{
+    margin-bottom: 15px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#cross{
+    text-align: right;
+}
+
+#logo_princ{
+    width: 50px;
+}
+
+#selec{
+    color: var(--color-text-violet);
+    font-size: 10px;
+    display: flex;
+    margin-bottom: 20px;
+    width: 163px;
+    gap: 10px;
+    margin-left: 20px;
+
+}
+
+.categorie{
+    color: white;
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    gap: 10px;
+}
+.name_menu{
+    font-size: 15px;
+}
+
+.categorie span{
+    transition: all 300ms ease;
+}
+
+.categorie:hover span{
+    margin-left: 20px;
+    color: var(--color-text-violet);
+}
+.categorie:hover p{
+    color: var(--color-text-violet);
+}
+
+.separ{
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-background);
+    margin-bottom: 30px;
+}
+
+.center{
+    width: 100%;
+    margin-left: 170px;
+}
+
+footer{
+    z-index: 11;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background-color: red;
+    bottom: 0;
+}

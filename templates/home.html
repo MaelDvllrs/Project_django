@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_head %}
+    <link rel="stylesheet" href="{% static "css/home.css" %}"/>
+    <title>Spotifi | home</title>
+{% endblock %}
+
+{% block content %}
+    <div class="welcome">
+        {% if user.is_authenticated %}
+            <p id="hello"><b>Hello {{ user.username }}.</b></p>
+        {% else %}
+            <p id="hello"><b>Hello, Sign in for continue.</b></p>
+            <a href="/accounts/login" id="signin"><b>Sign In</b></a>
+        {% endif %}
+        <img id="background" src="{% static "assets/background.png" %}">
+    </div>
+{% endblock %}
+

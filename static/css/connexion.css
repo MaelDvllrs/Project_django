@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+:root{
+    /*COLOR*/
+    --color-background: #181a1e;
+    --color-menu: #202528;
+    --color-text-violet: #7030a0;
+
+    /*FONT*/
+    --font-nunito: 'Nunito', sans-serif;
+
+}
+
+
+body{
+    background-color: var(--color-background);
+    overflow-x: hidden;
+    font-family: var(--font-nunito);
+
+}
+
+.container{
+    height: 100vh;
+    width: 80vw;
+}
+
+.auth{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--color-menu);
+    width: 30%;
+    height: 70%;
+    border: solid var(--color-menu)15px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 40px black;
+    color: white;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin-bottom: 5%;
+}
+
+#title-1{
+    position: relative;
+    text-align: center;
+    bottom: 30%;
+    font-family: var(--font-nunito);
+}
+
+img{
+    width: 60px;
+}
+
+.login{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#id_login, #id_password{
+    background-color: transparent;
+    border: none;
+    border-bottom: solid var(--color-text-violet) 2px;
+    width: 60%;
+    height: 9px;
+    text-align: center;
+    transition: 0.3s;
+    font-family: var(--font-nunito);
+    font-size: medium;
+    color: white;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+#box-key:focus{
+    width: 90%;
+    outline: none;
+}
+
+#submit-key{
+    font-size: 20px;
+    bottom: 5%;
+    width: 50%;
+    height: 30px;
+    background-color: transparent;
+    border: solid var(--color-text-violet) 2px;
+    border-radius: 4px;
+    font-family: var(--font-nunito);
+    color: var(--color-text-violet);
+}
+
+#submit-key:hover{
+    cursor: pointer;
+    background-color: var(--color-text-violet);
+    color: var(--color-menu);
+    transition: 0.3s;
+}
+
+.secondaryAction{
+    text-decoration: none;
+    font-size: 11px;
+    margin-top: 2%;
+}
+
+.or{
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.line{
+    height: 2px;
+    background-color: white;
+    width: 40%;
+}
+
+.social-media{
+    background-color: white;
+    width: 80%;
+    margin: 2%;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+
+
+}
+#facebook{
+    background-color: blue;
+
+}
+#google{
+    background-color: red;
+}
+svg{
+    fill: white;
+    margin-right: 4px;
+}
+
+
+.signup{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+
+}
+a{
+    margin-left: 10px;
+    text-align: center;
+    color: var(--color-text-violet);
+    text-decoration: underline;
+}
+a:hover{
+    color: white;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+
+
