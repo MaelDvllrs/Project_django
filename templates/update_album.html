@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_head %}
+    <link rel="stylesheet" href="{% static "css/add_album.css" %}"/>
+    <title>Spotifi | update album</title>
+{% endblock %}
+{% block content %}
+    {% if  id_submitter  ==  user.id  %}
+    <div class="div_add_music">
+      <form action="" method="post" enctype="multipart/form-data">
+         {% csrf_token %}
+         <p>Title: </p>
+         {{ form.title }}
+         <p>Image: </p>
+         {{ form.cover }}
+        <button type="submit" class="btn_add">Update Album</button>
+      </form>
+  </div>
+  {% endif %}
+{% endblock %}

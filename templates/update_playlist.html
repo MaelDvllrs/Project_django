@@ -2,9 +2,10 @@
 {% load static %}
 {% block extra_head %}
     <link rel="stylesheet" href="{% static "css/add_playlist.css" %}"/>
-    <title>Spotifi | create playlist</title>
+    <title>Spotifi | update playlist</title>
 {% endblock %}
 {% block content %}
+    {% if  id_submitter  ==  user.id  %}
     <div class="div_add_music">
       <form action="" method="post" enctype="multipart/form-data">
          {% csrf_token %}
@@ -12,8 +13,6 @@
          {{ form.name }}
          <p>Image: </p>
          {{ form.image_playlist }}
-         <p>Music (Add the first music, you can add more later): </p>
-         {{ form.music }}
          <label class="checkbox_label">
              <p>Public: </p>
             {{ form.public }}
@@ -21,7 +20,8 @@
                 <span class="checkbox_indicator"></span>
             </span>
          </label>
-        <button type="submit" class="btn_add">Create Playlist</button>
+        <button type="submit" class="btn_add">Update Playlist</button>
       </form>
   </div>
+  {% endif %}
 {% endblock %}

@@ -66,6 +66,25 @@
     cursor: pointer;
 }
 
+.info_style{
+    width: 90%;
+    display: flex;
+    align-items: end;
+}
+
+#image_style{
+    margin-right: 20px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+#name_style{
+    color: dimgrey;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+
+}
 
 
 .info-music_list{
@@ -108,7 +127,7 @@
 #music_case{
     position: relative;
     width: 70%;
-    margin-bottom: 10px;
+    margin-bottom: 2px;
 }
 
 #music_link{
@@ -140,3 +159,12 @@
     text-align: center;
 }
 
+.album_music_playlist{
+    color: white;
+    width: 20%;
+    text-align: center;
+}
+
+.album_music_playlist:hover{
+    color: var(--color-text-violet);
+}

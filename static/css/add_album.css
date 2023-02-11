@@ -33,14 +33,14 @@ form{
     color: white;
 }
 
-#id_name, #id_image_playlist, #id_music, #id_public{
+#id_title, #id_cover{
     width: 100%;
     background-color: transparent;
     margin-bottom: 10%;
     color: white;
     font-size: 20px;
 }
-#id_name{
+#id_title{
     height: 30px;
     border-top: none;
     border-right: none;
@@ -62,48 +62,3 @@ form{
     color: var(--color-background);
     cursor: pointer;
 }
-
-.checkbox_label{
-    display: flex;
-    align-items: center;
-    margin-bottom: 10%;
-}
-
-#id_public{
-    clip: rect(0 0 0 0);
-	clip-path: inset(50%);
-	height: 1px;
-	overflow: hidden;
-	position: absolute;
-	white-space: nowrap;
-	width: 1px;
-}
-
-.checkbox_container{
-    margin-left: 10px;
-    width: 70px;
-    height: 30px;
-    border-radius: 20px;
-    background-color: transparent;
-    border: dimgrey 2px solid;
-    justify-content: left;
-    cursor: pointer;
-}
-
-.checkbox_indicator{
-    display: flex;
-    width: 30px;
-    height: 30px;
-    border-radius: 30px;
-    background-color: var(--color-menu);
-}
-
-#id_public:checked + .checkbox_container{
-    display: flex;
-    justify-content: right;
-    background-color: var(--color-text-violet);
-    transition: justify-content 0.2s ease-in-out;
-
-}
-
-

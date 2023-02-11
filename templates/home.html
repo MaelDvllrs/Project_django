@@ -8,12 +8,52 @@
 {% block content %}
     <div class="welcome">
         {% if user.is_authenticated %}
+            {% if request.user.is_staff %}
+                <div class="admin_div">You are logged in as an administrator.<a id="admin_link" href="/admin">admin page</a></div>
+            {% endif %}
             <p id="hello"><b>Hello {{ user.username }}.</b></p>
+            <div class="home_pres">
+                <div class="home_list">
+                        <div id="playlist" class="playlist_container">
+                            {% for object in playlist %}
+                                {% if object.submitter.id == user.id %}
+                                    <a class="playlist" href="{% url 'playlist' object.id%}">
+                                        <img id="img_playlist" src="{{ object.image_playlist.url }}">
+                                        <p id="playlist_name"><b>{{ object.name }}</b></p>
+                                        <p id="playlist_submitter">Created by {{ object.submitter }}</p>
+                                    </a>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    <div id="album" class="playlist_container">
+                        {% for object in album %}
+                                    <a class="playlist" href="{% url 'playlist' object.id%}">
+                                        <img id="img_playlist" src="{{ object.cover.url }}">
+                                        <p id="playlist_name"><b>{{ object.title }}</b></p>
+                                        <p id="playlist_submitter">Created by {{ object.submitter }}</p>
+                                    </a>
+                            {% endfor %}
+                    </div>
+                    <div class="music">
+                        {% for music in music %}
+                            <ul class="music_list">
+                                <li id="music_case">
+                                    <a href="{% url 'album' music.album.id %}" id="music_link">
+                                        <img id="cover_music" class="cover_music_playlist" src="{{ music.album.cover.url }}">
+                                        <p class="title_music_playlist">{{ music.title }}</p>
+                                        <p class="title_music_playlist">{{ music.submitter }}</p>
+                                        <p class="title_music_playlist">{{ music.album.title }}</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
         {% else %}
             <p id="hello"><b>Hello, Sign in for continue.</b></p>
             <a href="/accounts/login" id="signin"><b>Sign In</b></a>
         {% endif %}
-        <img id="background" src="{% static "assets/background.png" %}">
     </div>
 {% endblock %}
 

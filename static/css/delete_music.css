@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+:root{
+    /*COLOR*/
+    --color-background: #181a1e;
+    --color-menu: #202528;
+    --color-text-violet: #7030a0;
+
+    /*FONT*/
+    --font-nunito: 'Nunito', sans-serif;
+
+}
+
+
+body{
+    background-color: var(--color-background);
+    overflow-x: hidden;
+    font-family: var(--font-nunito);
+
+}
+
+.container{
+    height: 100vh;
+    width: 80vw;
+}
+
+
+.delete{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--color-menu);
+    width: 30%;
+    height: 70%;
+    border: solid var(--color-menu)15px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 40px black;
+    color: white;
+}
+
+form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+#delete_btn{
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    width: 50%;
+    height: 50px;
+    background-color: transparent;
+    border: var(--color-text-violet) solid 4px;
+    border-radius: 30px;
+}
+
+#delete_btn:hover{
+    background-color: var(--color-text-violet);
+    cursor: pointer;
+    transition: 0.2s;
+}

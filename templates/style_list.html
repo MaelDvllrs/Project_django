@@ -2,11 +2,11 @@
 {% load static %}
 {% block extra_head %}
     <link rel="stylesheet" href="{% static "css/playlist_list.css" %}"/>
-    <title>Spotifi | Album</title>
+    <title>Spotifi | Style</title>
 {% endblock %}
 {% block content %}
     <div class="playlist_list">
-    <form id="search_form" action="{% url 'album_list' %}" method="get" accept-charset="utf-8">
+    <form id="search_form" action="{% url 'style_list' %}" method="get" accept-charset="utf-8">
           <input class="search_bar" name="q" type="text" placeholder="Search album name">
           <button class="search_btn" type="submit">
                <svg fill="#FFFFFF" width="25px" height="25px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
@@ -14,20 +14,15 @@
                </svg>
           </button>
     </form>
-    <p id="title_playlist">All Albums</p>
+    <p id="title_playlist">Styles</p>
     <hr id="hr_top">
     <div class="container_playlist">
         {% for object in object_list %}
-            <a class="playlist" href="{% url 'album' object.id%}">
-                <img id="img_playlist" src="{{ object.cover.url }}">
-                <p id="playlist_name"><b>{{ object.title }}</b></p>
-                <p id="playlist_submitter">By: {{ object.submitter }}</p>
+            <a class="playlist" href="{% url 'style' object.id%}">
+                <img id="img_playlist" src="{{ object.image_style.url }}">
+                <p id="playlist_name"><b>{{ object.name }}</b></p>
             </a>
         {% endfor %}
-        <a class="playlist" href="{% url 'addAlbum' %}">
-            <span id="add_playlist_icon" class="material-icons-outlined">add_circle</span>
-            <p id="playlist_name"><b>Album</b></p>
-        </a>
     </div>
     </div>
 {% endblock %}
