@@ -6,8 +6,8 @@ from spotifi.models import Music
 
 class Playlist(models.Model):
     submitter = models.ForeignKey(get_user_model(), null=True, blank=True, on_delete=models.CASCADE, default='')
-    name = models.CharField(max_length=100, null=True, blank=True, default='')
-    image_playlist = models.ImageField(blank=True, null=True, default='')
+    name = models.CharField(max_length=100, null=False, blank=True, default='')
+    image_playlist = models.ImageField(blank=False, null=True, default='')
     music = models.ManyToManyField(Music, null=True, blank=True, related_name="music")
     public = models.BooleanField(null=False, blank=False, default=True)
 
