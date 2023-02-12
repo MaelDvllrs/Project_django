@@ -14,6 +14,7 @@
          <p>Image: </p>
          {{ form.cover }}
         <button type="submit" class="btn_add">Update Album</button>
+        <a class="delete_btn" href="{% url 'deleteAlbum' pk=album.pk %}">Delete album</a>
       </form>
   </div>
   {% endif %}

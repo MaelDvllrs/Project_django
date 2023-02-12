@@ -80,12 +80,14 @@ form{
 }
 
 .checkbox_container{
+    display: flex;
+    align-items: center;
     margin-left: 10px;
-    width: 70px;
+    width: 60px;
     height: 30px;
     border-radius: 20px;
-    background-color: transparent;
-    border: dimgrey 2px solid;
+    background-color: dimgrey;
+    border: dimgrey 4px solid;
     justify-content: left;
     cursor: pointer;
 }
@@ -95,14 +97,38 @@ form{
     width: 30px;
     height: 30px;
     border-radius: 30px;
-    background-color: var(--color-menu);
+    background-color: white;
 }
 
 #id_public:checked + .checkbox_container{
     display: flex;
     justify-content: right;
     background-color: var(--color-text-violet);
+    border-color: var(--color-text-violet);
     transition: justify-content 0.2s ease-in-out;
+
+}
+
+
+.delete_btn{
+    display: flex;
+    background-color: firebrick;
+    margin-top: 5%;
+    height: 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+
+.delete_btn:hover{
+    background-color: darkred;
+}
+
+
+#image_playlist-clear_id{
 
 }
 

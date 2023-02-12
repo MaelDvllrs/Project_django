@@ -62,3 +62,20 @@ form{
     color: var(--color-background);
     cursor: pointer;
 }
+
+
+.delete_btn{
+    display: flex;
+    background-color: firebrick;
+    margin-top: 5%;
+    height: 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.delete_btn:hover{
+    background-color: darkred;
+}

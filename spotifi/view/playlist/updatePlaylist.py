@@ -10,8 +10,7 @@ class UpdatePlaylistView(LoginRequiredMixin, UpdateView):
     template_name = 'update_playlist.html'
     model = models.Playlist
     fields = ['name', 'image_playlist', 'public']
-    success_url = reverse_lazy('playlist_list')
-
+    success_url = '/playlist/?q='
     def get_object(self, queryset=None):
         id_submitter = self.kwargs['id_submitter']
         obj = get_object_or_404(models.Playlist, pk=self.kwargs['id_playlist'], submitter_id=id_submitter)

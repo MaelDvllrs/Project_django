@@ -27,7 +27,7 @@
                         </div>
                     <div id="album" class="playlist_container">
                         {% for object in album %}
-                                    <a class="playlist" href="{% url 'playlist' object.id%}">
+                                    <a class="playlist" href="{% url 'album' object.id%}">
                                         <img id="img_playlist" src="{{ object.cover.url }}">
                                         <p id="playlist_name"><b>{{ object.title }}</b></p>
                                         <p id="playlist_submitter">Created by {{ object.submitter }}</p>

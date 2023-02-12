@@ -21,6 +21,7 @@
             </span>
          </label>
         <button type="submit" class="btn_add">Update Playlist</button>
+        <a class="delete_btn" href="{% url 'deletePlaylist' pk=playlist.pk %}">Delete playlist</a>
       </form>
   </div>
   {% endif %}
